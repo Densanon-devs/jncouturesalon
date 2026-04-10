@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Booking | JN Couture Salon — Hayden, Idaho</title>
+  <meta name="description" content="Book an appointment at JN Couture Salon. Located at 8879 N Hess St, Suite C, Hayden, ID 83835. Call (208) 762-4667 or email jncouturesalon@gmail.com. By appointment only.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo">JN Couture <span>Salon</span></a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="nav-dropdown">
+            <a href="services/index.html">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="services/haircuts-styling.html">Haircuts &amp; Styling</a></li>
+              <li><a href="services/hair-coloring.html">Hair Coloring</a></li>
+              <li><a href="services/balayage-highlights.html">Balayage &amp; Highlights</a></li>
+              <li><a href="services/blowouts.html">Blowouts</a></li>
+              <li><a href="services/treatments.html">Hair Treatments</a></li>
+              <li><a href="services/extensions.html">Extensions</a></li>
+              <li><a href="services/waxing.html">Body Waxing</a></li>
+            </ul>
+          </li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="tel:+12087624667" class="header-cta header-cta-desktop">&#9742; (208) 762-4667</a>
+      <button class="menu-toggle" aria-label="Toggle navigation menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span class="separator">/</span><span class="current">Contact</span></div>
+      <h1>Book Your Appointment</h1>
+      <p>Ready for your new look? Get in touch and we will get you on the schedule.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <h2>Visit Our Studio</h2>
+          <p style="margin-bottom:2rem; color:var(--color-text-light);">JN Couture Salon operates by appointment only. Give us a call or send a message and we will find the perfect time for your visit.</p>
+
+          <div class="contact-info-item">
+            <div class="icon-circle">&#9742;</div>
+            <div><h4>Phone</h4><p><a href="tel:+12087624667" style="color:var(--color-accent); font-weight:600;">(208) 762-4667</a></p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon-circle">&#9993;</div>
+            <div><h4>Email</h4><p><a href="mailto:jncouturesalon@gmail.com" style="color:var(--color-accent); font-weight:600;">jncouturesalon@gmail.com</a></p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon-circle">&#9873;</div>
+            <div><h4>Location</h4><p>8879 N Hess St, Suite C<br>Hayden, ID 83835</p></div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon-circle">&#9719;</div>
+            <div>
+              <h4>Studio Hours</h4>
+              <table class="hours-table">
+                <tr><td>Monday</td><td>Closed</td></tr>
+                <tr><td>Tuesday</td><td>9:00 AM &ndash; 6:00 PM</td></tr>
+                <tr><td>Wednesday</td><td>9:00 AM &ndash; 6:00 PM</td></tr>
+                <tr><td>Thursday</td><td>9:00 AM &ndash; 6:00 PM</td></tr>
+                <tr><td>Friday</td><td>9:00 AM &ndash; 6:00 PM</td></tr>
+                <tr><td>Saturday</td><td>9:00 AM &ndash; 6:00 PM</td></tr>
+                <tr><td>Sunday</td><td>Closed</td></tr>
+              </table>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="icon-circle">&#9635;</div>
+            <div><h4>Amenities</h4><p>Wheelchair accessible &bull; Free Wi-Fi &bull; Credit cards accepted &bull; Free parking</p></div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3 style="margin-bottom:1.5rem;">Send Us a Message</h3>
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group"><label for="name">Name <span style="color:var(--color-error);">*</span></label><input type="text" id="name" name="name" placeholder="Your full name" required></div>
+              <div class="form-group"><label for="email">Email <span style="color:var(--color-error);">*</span></label><input type="email" id="email" name="email" placeholder="your@email.com" required></div>
+            </div>
+            <div class="form-row">
+              <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" name="phone" placeholder="(208) 555-0000"></div>
+              <div class="form-group">
+                <label for="service">Service Interested In</label>
+                <select id="service" name="service">
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="haircut">Haircut &amp; Styling</option>
+                  <option value="color">Hair Coloring</option>
+                  <option value="balayage">Balayage &amp; Highlights</option>
+                  <option value="blowout">Blowout</option>
+                  <option value="treatment">Hair Treatment</option>
+                  <option value="extensions">Extensions</option>
+                  <option value="waxing">Body Waxing</option>
+                  <option value="consultation">Consultation Only</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="stylist">Preferred Stylist</label>
+              <select id="stylist" name="stylist">
+                <option value="" selected>No preference</option>
+                <option value="jill">Jill — Owner &amp; Extension Specialist</option>
+                <option value="elle">Elle — Colorist &amp; Stylist</option>
+                <option value="jozee">Jozee — Stylist</option>
+                <option value="tiffany">Tiffany — Colorist &amp; Stylist</option>
+                <option value="melissa">Melissa — Color Specialist</option>
+              </select>
+            </div>
+            <div class="form-group"><label for="message">Message <span style="color:var(--color-error);">*</span></label><textarea id="message" name="message" placeholder="Tell us about the service you're interested in, your preferred dates/times, or any questions you have." required></textarea></div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-header"><span class="label">Find Us</span><h2>Our Location</h2></div>
+      <div style="background:var(--color-light-gray); border-radius:var(--border-radius); height:400px; display:flex; align-items:center; justify-content:center; color:var(--color-medium-gray); font-size:1.1rem; border:2px dashed var(--color-medium-gray);">
+        <div style="text-align:center;">
+          <p style="font-size:2rem; margin-bottom:0.5rem;">&#9873;</p>
+          <p style="font-weight:600; color:var(--color-dark-gray); margin-bottom:0.25rem;">Google Map Embed</p>
+          <p style="font-size:0.9rem;">8879 N Hess St, Suite C &bull; Hayden, ID 83835</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header"><span class="label">Common Questions</span><h2>Frequently Asked Questions</h2></div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Do you accept walk-ins?</button>
+          <div class="faq-answer"><p>JN Couture Salon operates by appointment only. This allows us to give every client the dedicated time and attention they deserve. Call us at <a href="tel:+12087624667">(208) 762-4667</a> or email <a href="mailto:jncouturesalon@gmail.com">jncouturesalon@gmail.com</a> to book.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I get pricing information?</button>
+          <div class="faq-answer"><p>Pricing varies by stylist and service complexity. The best way to get an accurate quote is to call us or schedule a consultation. We always provide a detailed estimate based on your specific hair needs before any work begins.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is the salon wheelchair accessible?</button>
+          <div class="faq-answer"><p>Yes. Our studio at 8879 N Hess St, Suite C is wheelchair accessible. We also have free parking directly available at our location.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Do you offer consultations for extensions?</button>
+          <div class="faq-answer"><p>Yes. We strongly recommend a consultation for extension services. This allows our master extension specialist, Jill, to assess your hair, discuss your goals, determine the best method, and provide an accurate quote and timeline.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Where are you located?</button>
+          <div class="faq-answer"><p>We are located at 8879 N Hess St, Suite C, Hayden, ID 83835. Free parking is available at our location. We previously operated in Coeur d'Alene and relocated to our current Hayden studio.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Prefer to Call?</h2>
+      <p>Skip the form — talk to us directly about booking your appointment.</p>
+      <div class="btn-group"><a href="tel:+12087624667" class="btn btn-primary btn-lg">&#9742; (208) 762-4667</a></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-about">
+          <h4>JN Couture <span style="color: var(--color-accent);">Salon</span></h4>
+          <p>A premium hair salon in Hayden, Idaho. Founded in 2007 by Jill Nelmar, we are dedicated to personalized service, expert styling, and helping every client feel confident and beautiful. By appointment only.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/jncouturesalon/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">IG</a>
+            <a href="https://www.facebook.com/JNCouture/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">FB</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services/index.html">Services</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div class="footer-col"><h4>Services</h4><ul><li><a href="services/haircuts-styling.html">Haircuts &amp; Styling</a></li><li><a href="services/hair-coloring.html">Hair Coloring</a></li><li><a href="services/balayage-highlights.html">Balayage &amp; Highlights</a></li><li><a href="services/blowouts.html">Blowouts</a></li><li><a href="services/treatments.html">Hair Treatments</a></li><li><a href="services/extensions.html">Extensions</a></li><li><a href="services/waxing.html">Body Waxing</a></li></ul></div>
+        <div class="footer-col"><h4>Visit Us</h4><ul><li>8879 N Hess St, Suite C</li><li>Hayden, ID 83835</li></ul><p style="margin-top:1.25rem;"><a href="tel:+12087624667" style="color:var(--color-accent);">(208) 762-4667</a></p><p><a href="mailto:jncouturesalon@gmail.com" style="color:rgba(255,255,255,0.6);">jncouturesalon@gmail.com</a></p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 JN Couture Salon. All rights reserved.</p><p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms</a></p></div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
