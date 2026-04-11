@@ -1,5 +1,5 @@
 /* ============================================
-   Salon Studio Template — Main Stylesheet
+   JN Couture Salon — Main Stylesheet
    ============================================ */
 
 /* --- CSS Custom Properties --- */
@@ -128,6 +128,11 @@ p { margin-bottom: 1rem; }
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-primary);
+}
+
+.logo img {
+  height: 52px;
+  width: auto;
 }
 
 .logo span {
