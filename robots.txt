@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jncouturesalon.com/sitemap.xml
+Sitemap: https://demo.densanon.com/sitemap.xml
