@@ -1,0 +1,42 @@
+# JN Couture — Reviews Sourcing
+
+**Rule:** every published quote on `reviews.html` must come from a real third-party review platform, with a link the visitor can click to verify on the source. No paraphrases, no invented "Verified Client" quotes.
+
+## Currently published (2026-04-27)
+
+All three are from BestProsInTown — that platform displays reviews **anonymously**, so the attribution is "Verified review · BestProsInTown · {month year}" instead of a name. Each card links to https://www.bestprosintown.com/id/hayden/j-n-couture-salon-/ where the visitor can confirm.
+
+| Card | Date | Stylist | Source |
+| --- | --- | --- | --- |
+| 1 — extensions / Jill | Nov 2024 | Jill | BestProsInTown |
+| 2 — color + bangs / Elle | May 2024 | Elle | BestProsInTown |
+| 3 — cut / Jozee | Apr 2024 | Jozee | BestProsInTown |
+
+The 4th card is the Nextdoor "Neighborhood Favorite 2017 / 2020 / 2022" recognition (linked to the Nextdoor page).
+
+A "Read all Google reviews →" button below the grid points at `https://www.google.com/maps?cid=12966735111123942760` (the salon's Google listing via cid; opens in Google Maps).
+
+## What was attempted but blocked
+
+- **Google Maps reviews** — bot-blocked. Page renders as JS-only; WebFetch returns header-only content. We have the canonical URL via `cid=12966735111123942760` but no individual review text was directly verified.
+- **Yelp** — returns HTTP 403 to non-browser fetchers. Yelp's TOS also restricts automated review reuse.
+- **Facebook** — login wall on the reviews tab.
+
+Third-party scraper sites (manereviews.com, salondiscover.com) do mirror real Google reviewer names + dates, but quotes can drift over time and we can't verify them against the live source. We do **not** publish those without browser-verification.
+
+## How to add more (manual path)
+
+When you want to add a Google, Yelp, or Facebook review:
+
+1. Open the listing in a normal browser (signed-in is fine).
+2. Pick a review. Copy the **reviewer's display name** (e.g. "Sarah K."), **date**, **star rating**, and the **exact quote** (no paraphrasing).
+3. Drop them into a card in `reviews.html` using the same structure as the BestProsInTown cards. Source label = the platform name + month/year. The "Read on …" link points to either:
+   - the review's permalink (Google reviews can be linked individually if you click "Share")
+   - or the listing URL if no permalink is exposed (e.g. Yelp)
+4. Commit with a message like `Add Google review by Sarah K. (May 2026)`.
+
+## Open follow-ups
+
+- **Real Google Place ID** (ChIJ-format): not retrieved. The current writereview link uses `?ludocid=12966735111123942760`, which works. If you want the proper `?placeid=ChIJ...` form, paste the Maps URL into Google's [Place ID Finder](https://developers.google.com/maps/documentation/places/web-service/place-id) and swap the param.
+- **Stat numbers** at the top of `reviews.html` (4.7 Google, 87+ Google, 4.9 BestPros, 90% Facebook) come from older third-party listings. Verify against the live profiles next time you're signed in and adjust if drifted.
+- **Nextdoor "Neighborhood Favorite" badges** for 2017/2020/2022 are reported by Google's snippet of Nextdoor's own meta description but were not visible on the rendered Nextdoor page during scraping. Confirm in a browser if you want to keep displaying those years.
