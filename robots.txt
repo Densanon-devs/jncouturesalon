@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://testsite.densanon.com/sitemap.xml
+Sitemap: https://jncouture.com/sitemap.xml

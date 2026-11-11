@@ -1,7 +1,7 @@
 # JN Couture Salon — Website
 
 Static marketing site for **JN Couture Salon**, a premium hair salon in Hayden, Idaho.
-Plain HTML/CSS/JS, no build step. Hosted on GitHub Pages (`testsite.densanon.com`).
+Plain HTML/CSS/JS, no build step. Hosted on GitHub Pages (`jncouture.com`).
 
 Pages: home, about, gallery, reviews, contact, and seven service pages under `services/`.
 Source copy and asset notes live in `content/`.
