@@ -1438,3 +1438,6 @@ p { margin-bottom: 1rem; }
     justify-content: center;
   }
 }
+
+/* intrinsic sizes are set in HTML to stop layout shift; keep images fluid */
+img { max-width: 100%; height: auto; }

@@ -111,20 +111,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
 
-      if (valid) {
-        var submitBtn = contactForm.querySelector('button[type="submit"]');
-        var originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Message Sent!';
-        submitBtn.style.background = 'var(--color-success)';
-        submitBtn.disabled = true;
+      if (!valid) return;
 
-        setTimeout(function() {
-          submitBtn.textContent = originalText;
-          submitBtn.style.background = '';
+      var submitBtn = contactForm.querySelector('button[type="submit"]');
+      var status = document.getElementById('form-status');
+      var originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+      if (status) { status.textContent = ''; status.style.color = ''; }
+
+      var data = {};
+      new FormData(contactForm).forEach(function(v, k) { data[k] = v; });
+
+      fetch('https://formsubmit.co/ajax/jncouturesalon@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function(r) { return r.json().catch(function() { return {}; }); })
+        .then(function(res) {
+          if (res && (res.success === true || res.success === 'true')) {
+            contactForm.reset();
+            submitBtn.textContent = 'Message Sent!';
+            submitBtn.style.background = 'var(--color-success)';
+            if (status) status.textContent = "Thanks! We got your message and will get back to you soon.";
+            if (typeof gtag === 'function') gtag('event', 'generate_lead');
+          } else {
+            throw new Error((res && res.message) || 'send failed');
+          }
+        })
+        .catch(function() {
           submitBtn.disabled = false;
-          contactForm.reset();
-        }, 3000);
-      }
+          submitBtn.textContent = originalText;
+          if (status) {
+            status.style.color = 'var(--color-error)';
+            status.innerHTML = 'Sorry, your message didn\'t go through. Please call us at <a href="tel:+12087624667">(208) 762-4667</a> or email <a href="mailto:jncouturesalon@gmail.com">jncouturesalon@gmail.com</a>.';
+          }
+        });
     });
   }
 

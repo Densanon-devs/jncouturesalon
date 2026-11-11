@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="site/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="site/images/apple-touch-icon.png">
   <title>Book an Appointment | JN Couture Salon — Hayden, Idaho Hair Salon</title>
-  <meta name="description" content="Book an appointment at JN Couture Salon, 8879 N Hess St, Suite C, Hayden, ID 83835. Serving Hayden, Coeur d'Alene, and Post Falls. Call (208) 762-4667 or email jncouturesalon@gmail.com.">
+  <meta name="description" content="Book at JN Couture Salon, 8879 N Hess St, Suite C, Hayden, ID. Open Tuesday to Saturday, 9 to 6. Call (208) 762-4667 or send us a message.">
   <meta name="keywords" content="book hair appointment Hayden Idaho, hair salon near me Hayden, JN Couture Salon contact, hair stylist Coeur d'Alene area, salon appointment Post Falls">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://jncouture.com/contact.html">
@@ -26,7 +26,7 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a href="index.html" class="logo"><picture><source srcset="site/images/logo-fb-large.webp" type="image/webp"><img src="site/images/logo-fb-large.jpg" alt="JN Couture Salon"></picture></a>
+      <a href="index.html" class="logo"><picture><source srcset="site/images/logo-fb-large.webp" type="image/webp"><img width="360" height="360" src="site/images/logo-fb-large.jpg" alt="JN Couture Salon"></picture></a>
       <nav class="main-nav">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -102,7 +102,11 @@
 
         <div class="contact-form">
           <h3 style="margin-bottom:1.5rem;">Send Us a Message</h3>
-          <form id="contact-form">
+          <form id="contact-form" action="https://formsubmit.co/jncouturesalon@gmail.com" method="POST">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <input type="hidden" name="_subject" value="New appointment request from jncouture.com">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://jncouture.com/thank-you.html">
             <div class="form-row">
               <div class="form-group"><label for="name">Name <span style="color:var(--color-error);">*</span></label><input type="text" id="name" name="name" placeholder="Your full name" required></div>
               <div class="form-group"><label for="email">Email <span style="color:var(--color-error);">*</span></label><input type="email" id="email" name="email" placeholder="your@email.com" required></div>
@@ -128,15 +132,18 @@
               <label for="stylist">Preferred Stylist</label>
               <select id="stylist" name="stylist">
                 <option value="" selected>No preference</option>
-                <option value="jill">Jill — Owner &amp; Extension Specialist</option>
-                <option value="elle">Elle — Colorist &amp; Stylist</option>
-                <option value="jozee">Jozee — Stylist</option>
-                <option value="tiffany">Tiffany — Colorist &amp; Stylist</option>
-                <option value="melissa">Melissa — Color Specialist</option>
+                <option value="Jill">Jill George: Owner, Extensions &amp; Master Color</option>
+                <option value="Tiffany">Tiffany Goodrick: Blonding</option>
+                <option value="Melissa">Melissa Breitenbach: Color &amp; Fine Hair</option>
+                <option value="Alicia">Alicia DeRossett: Color &amp; Bridal</option>
+                <option value="Candace">Candace Weiss: Highlights &amp; Color Correction</option>
+                <option value="Alysha">Alysha Martinez: Blonding, Vivids &amp; Bridal</option>
               </select>
             </div>
             <div class="form-group"><label for="message">Message <span style="color:var(--color-error);">*</span></label><textarea id="message" name="message" placeholder="Tell us about the service you're interested in, your preferred dates/times, or any questions you have." required></textarea></div>
             <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
+            <p id="form-status" role="status" aria-live="polite" style="margin-top:1rem; font-size:0.95rem;"></p>
+            <p style="margin-top:0.75rem; font-size:0.85rem; color:var(--color-text-light);">Prefer to talk? Call <a href="tel:+12087624667">(208) 762-4667</a>. We reply to messages during salon hours. <a href="privacy-policy.html">Privacy</a></p>
           </form>
         </div>
       </div>
@@ -231,10 +238,11 @@
         <div class="footer-col"><h4>Services</h4><ul><li><a href="services/haircuts-styling.html">Haircuts &amp; Styling</a></li><li><a href="services/hair-coloring.html">Hair Coloring</a></li><li><a href="services/balayage-highlights.html">Balayage &amp; Highlights</a></li><li><a href="services/blowouts.html">Blowouts</a></li><li><a href="services/treatments.html">Hair Treatments</a></li><li><a href="services/extensions.html">Extensions</a></li></ul></div>
         <div class="footer-col"><h4>Visit Us</h4><ul><li>8879 N Hess St, Suite C</li><li>Hayden, ID 83835</li></ul><p style="margin-top:1.25rem;"><a href="tel:+12087624667" style="color:var(--color-accent);">(208) 762-4667</a></p><p><a href="mailto:jncouturesalon@gmail.com" style="color:rgba(255,255,255,0.6);">jncouturesalon@gmail.com</a></p></div>
       </div>
-      <div class="footer-bottom"><p>&copy; 2026 JN Couture Salon. All rights reserved.</p><p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms</a></p></div>
+      <div class="footer-bottom"><p>&copy; 2026 JN Couture Salon. All rights reserved.</p><p><a href="privacy-policy.html">Privacy Policy</a></p></div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "160784ddc42b435eadb42db4a7d23918"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
